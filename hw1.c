@@ -8,6 +8,8 @@ int main(void)
     int num3 = num1 & num2;
     int num4 = num1 | num2;
     int num5 = num1 ^ num2;
-    printf("결과 : %d %d %d \n", num3,num4,num5);
+    printf(" %d \n", num3);
+    printf(" %d \n", num4);
+    printf(" %d \n", num5);
     return 0;
 }
