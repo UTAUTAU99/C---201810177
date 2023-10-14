@@ -6,12 +6,12 @@ int main(void)
     int price1;
     printf("=== 네이버 결제 계산 프로그램 ===\n주문액을 입력하세요: ");
     scanf("%d", &price1);
-    printf("=== 결제 수단 목록 === \na)NPay머니 네이버통장 충전결제 bNPay머니 일반 충전결제 c)계좌 간편결제 \nd)네이버 현대카드 간편결제e)청구할인 삼성카드결제 f)일반 카드결제\n");
+    printf("=== 결제 수단 목록 === \na)NPay머니 네이버통장 충전결제 b)NPay머니 일반 충전결제 c)계좌 간편결제 \nd)네이버 현대카드 간편결제e)청구할인 삼성카드결제 f)일반 카드결제\n");
 
     while (1)
     {
         printf("결제 수단을 입력하세요: ");
-        scanf("%c", &payment);
+        scanf(" %c", &payment);
         if ('a'<= payment && payment <='f')
         {
             break;
@@ -34,24 +34,24 @@ int main(void)
                        &price1, &price2, &price3, &price4, &price7, &price7);
                 break;
             case 'b' :
-                printf("=== 결제 및 적립내역 ===\n주문금액 : %d\n기본 적립: %d\n네이버통장 추가적립: %d\n네이버 멤버십 추가적립: %d\n총 적립액은 %d원입니다.\n",
-                       &price1);
+                printf("=== 결제 및 적립내역 ===\n주문금액 : %d\n기본 적립: %d\n네이버페이 머니 결제적립: %d\n네이버 멤버십 추가적립: %d\n총 적립액은 %d원입니다.\n",
+                       &price1, &price2, &price3, &price7);
                 break;
             case 'c' :
                 printf("=== 결제 및 적립내역 ===\n주문금액 : %d\n기본 적립:%d\n네이버 멤버십 추가적립: %d\n총 적립액은 %d원입니다.\n",
-                       &price1);
+                       &price1, &price2, &price7);
                 break;
             case 'd' :
                 printf("=== 결제 및 적립내역 ===\n주문금액 : %d\n기본 적립: %d\n네이버 현대카드 추가적립: %d\n네이버 멤버십 추가적립: %d\n총 적립액은 %d원입니다.\n",
-                       &price1);
+                       &price1, &price2, &price5, &price7);
                 break;
             case 'e' :
                 printf("=== 결제 및 적립내역 ===\n주문금액 : %d\n청구할인 %d\n기본 적립: %d\n네이버 멤버십 추가적립: %d\n총 적립액은 %d원입니다.\n",
-                       &price1);
+                       &price1, &price6, &price2, &price7);
                 break;
             case 'f' :
                 printf("=== 결제 및 적립내역 ===\n주문금액 : %d\n기본 적립: %d\n네이버 멤버십 추가적립: %d\n총 적립액은 %d원입니다.\n",
-                       &price1);
+                       &price1, &price2, &price7);
                 break;
         }
     }
@@ -59,28 +59,28 @@ int main(void)
             switch(payment)
         {
             case 'a' :
-            printf("=== 결제 및 적립내역 ===\n주문금액 : %d\n기본 적립: %d\n네이버페이 머니 결제적립: %d\n네이버통장 추가적립: %d\n총 적립액은 %d원입니다.\n",
-            &price1);
+                printf("=== 결제 및 적립내역 ===\n주문금액 : %d\n기본 적립: %d\n네이버페이 머니 결제적립: %d\n네이버통장 추가적립: %d\n총 적립액은 %d원입니다.\n",
+                &price1, &price2, &price3, &price4);
                 break;
             case 'b' :
-            printf("=== 결제 및 적립내역 ===\n주문금액 : %d\n기본 적립: %d\n네이버통장 추가적립: %d\n총 적립액은 %d원입니다.\n",
-            &price1);
+                printf("=== 결제 및 적립내역 ===\n주문금액 : %d\n기본 적립: %d\n네이버통장 추가적립: %d\n총 적립액은 %d원입니다.\n",
+                &price1, &price2, &price3);
                 break;
             case 'c' :
-            printf("=== 결제 및 적립내역 ===\n주문금액 : %d\n기본 적립:%d\n총 적립액은 %d원입니다.\n",
-            &price1);
+                printf("=== 결제 및 적립내역 ===\n주문금액 : %d\n기본 적립:%d\n총 적립액은 %d원입니다.\n",
+                &price1, &price2);
                 break;
             case 'd' :
-            printf("=== 결제 및 적립내역 ===\n주문금액 : %d\n기본 적립: %d\n네이버 현대카드 추가적립: %d\n총 적립액은 %d원입니다.\n",
-            &price1);
+                printf("=== 결제 및 적립내역 ===\n주문금액 : %d\n기본 적립: %d\n네이버 현대카드 추가적립: %d\n총 적립액은 %d원입니다.\n",
+                &price1, &price2, &price5);
                 break;
             case 'e' :
-            printf("=== 결제 및 적립내역 ===\n주문금액 : %d\n청구할인 %d\n기본 적립: %d\n총 적립액은 %d원입니다.\n",
-            &price1);
+                printf("=== 결제 및 적립내역 ===\n주문금액 : %d\n청구할인 %d\n기본 적립: %d\n총 적립액은 %d원입니다.\n",
+                &price1, &price6, &price2);
                 break;
             case 'f' :
-            printf("=== 결제 및 적립내역 ===\n주문금액 : %d\n기본 적립: %d\n총 적립액은 %d원입니다.\n",
-            &price1);
+                printf("=== 결제 및 적립내역 ===\n주문금액 : %d\n기본 적립: %d\n총 적립액은 %d원입니다.\n",
+                &price1, &price2);
                 break;
         }
     }
