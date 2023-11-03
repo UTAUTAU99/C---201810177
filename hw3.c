@@ -1,16 +1,43 @@
 #include <stdio.h>
 int main(void)
 {
-    int num, space, star;
-    for(num=0; num<5; num++)
-    {
-        for(space=num; space<=5-1; space++){
-            printf(" ");
-    }
-        for(star=0; star<=(num*2); star++){
-            printf("*");
-        }
-        printf("\n");
-    }   
-    return 0;
+	int a;
+	int b;
+	int c;
+
+	for (a = 0; a < 5; a++) 
+	{
+		for (b=a; b <= 5-1; b++) {
+			printf(" ");
+		}
+		for (c = 0; c <=(a*2); c++) {
+			printf("*");
+		}
+		printf("\n");
+	}
+
+	return 0;
+}
+
+#include <stdio.h>
+int main(void)
+{
+	int a;
+	int b;
+	int c;
+    int num;
+    printf("입력 :  ");
+    scanf("%d", &num);
+
+	for (a = 0; a < num; a++) 
+	{
+		for (b=a; b <= num-1; b++) {
+			printf(" ");
+		}
+		for (c = 0; c <=(a*2); c++) {
+			printf("*");
+		}
+		printf("\n");
+	}
+	return 0;
 }
