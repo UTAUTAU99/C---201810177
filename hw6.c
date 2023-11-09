@@ -3,10 +3,10 @@
 void odd(int* ptr)
 {
 	int i;
-	printf("Odd numbers:");
+	printf("Odd numbers: ");
 	for (i = 0; i < 5; ++i) {
 		if (ptr[i] % 2 != 0)
-			printf(" %d,", ptr[i]);
+			printf("%d ", ptr[i]);
 	}
 	printf("\b \n");
 }
@@ -14,10 +14,10 @@ void odd(int* ptr)
 void even(int* ptr)
 {
 	int i;
-	printf("Even numbers:");
+	printf("Even numbers: ");
 	for (i = 0; i < 5; ++i) {
 		if (ptr[i] % 2 == 0)
-			printf(" %d,", ptr[i]);
+			printf("%d ", ptr[i]);
 	}
 	printf("\b \n");
 }
