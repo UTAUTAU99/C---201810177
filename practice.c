@@ -1,10 +1,23 @@
 #include<stdio.h>
 int main(void)
 {
+    int arr[6] = {1, 2, 3, 4, 5, 6};
+    int * ptr1 = &arr[0];
+    int * ptr2 = &arr[5];
+    int temp;
     int i;
-    int arr[5];
 
-    printf("Please input five numbers : ");
-    scanf("%c", &arr);
-    printf("%c", &arr);
+    for(i=0 ; i<3 ; i++)
+    {
+        temp = *ptr1;
+        *ptr1 = *ptr2;
+        *ptr2 = temp;
+        ptr1 ++;
+        ptr2 --;
+    }
+    for(i=0 ; i<6 ; i++)
+        printf("%d", arr[i]);
+
+    return 0;
 }
+//temp = ptr1; ptr1 = ptr2; ptr2 = temp;
