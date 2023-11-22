@@ -1,13 +1,12 @@
 #include <stdio.h>
+#include "ascii_art.h"
 int main(void)
 {
     char * ptr1;
     char * ptr2;
     char * ptr3;
     int picnum, Xpoint, Ypoint;
-    *ptr1 = ascii_main[9][46]
-    *ptr2 = ascii_flower[13][18]
-    *ptr3 = ascii_castle[20][57]
+    * ptr3 = ascii_main[9][46];
 
     printf("그림 번호 선택(1.main, 2.flower, 3.castle, 기타:종료): ");
     scanf("%d", &picnum);
