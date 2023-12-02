@@ -1,6 +1,12 @@
 #include <stdio.h>
 #include "ascii_art.h"
 
+void print_spaces(int count) {
+    for (int i = 0; i < count; i++) {
+        printf(" ");
+    }
+}
+
 int main(void) {
     int picnum, Xpoint, Ypoint;
     int i, lines;
@@ -15,45 +21,43 @@ int main(void) {
         case 1:
             ptr_main = (char (*)[46])ascii_main;
             lines = 9;
-            printf("오른쪽으로 몇 줄 이동할까요? ");
-            scanf("%d", &Xpoint);
-            printf("아래로 몇 줄 이동할까요? ");
-            scanf("%d", &Ypoint);
-            printf("선택한 그림을 해당 위치로부터 출력합니다. \n");
-            for (i =0; i < lines; i++) {
-                printf("%s\n", ptr_main[i]);
-            }
             break;
 
         case 2:
             ptr_flower = (char (*)[18])ascii_flower;
             lines = 13;
-            printf("오른쪽으로 몇 줄 이동할까요? ");
-            scanf("%d", &Xpoint);
-            printf("아래로 몇 줄 이동할까요? ");
-            scanf("%d", &Ypoint);
-            printf("선택한 그림을 해당 위치로부터 출력합니다. \n");
-            for (i = 0; i < lines; i++) {
-                printf("%s\n", ptr_flower[i]);
-            }
             break;
 
         case 3:
             ptr_castle = (char (*)[57])ascii_castle;
             lines = 21;
-            printf("오른쪽으로 몇 줄 이동할까요? ");
-            scanf("%d", &Xpoint);
-            printf("아래로 몇 줄 이동할까요? ");
-            scanf("%d", &Ypoint);
-            printf("선택한 그림을 해당 위치로부터 출력합니다. \n");
-            for (i = 0; i < lines; i++) {
-                printf("%s\n", ptr_castle[i]);
-            }
             break;
 
         default:
             printf("안녕히 가세요\n");
             return 0;
+    }
+
+    printf("오른쪽으로 몇 줄 이동할까요? ");
+    scanf("%d", &Xpoint);
+    printf("아래로 몇 줄 이동할까요? ");
+    scanf("%d", &Ypoint);
+    printf("선택한 그림을 해당 위치로부터 출력합니다.\n");
+
+    for (i = 0; i < Ypoint; i++) {
+        printf("\n");
+    }
+
+    for (i = 0; i < lines; i++) {
+        print_spaces(Xpoint);
+        
+        if (picnum == 1) {
+            printf("%s\n", ptr_main[i]);
+        } else if (picnum == 2) {
+            printf("%s\n", ptr_flower[i]);
+        } else if (picnum == 3) {
+            printf("%s\n", ptr_castle[i]);
+        }
     }
     return 0;
 }
