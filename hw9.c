@@ -14,7 +14,7 @@ void convCase(char *sentence) {
 }
 
 int main(void) {
-    printf("입력> ");
+    printf("input> ");
 
     char sentence[101];
     fgets(sentence, sizeof(sentence), stdin);
@@ -26,7 +26,7 @@ int main(void) {
 
     convCase(sentence);
 
-    printf("변환된 문장: %s\n", sentence);
+    printf("Output> %s\n", sentence);
 
     return 0;
 }
